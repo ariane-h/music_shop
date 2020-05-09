@@ -2,9 +2,10 @@ package products.instruments;
 
 
 import products.Brand;
+import products.ISell;
 import products.ProductCondition;
 
-public class Guitar extends Instrument implements IPlay{
+public class Guitar extends Instrument implements IPlay, ISell {
 
     private GuitarType type;
     private Integer numberOfStrings;
@@ -26,5 +27,11 @@ public class Guitar extends Instrument implements IPlay{
 
     public String play(String sound) {
         return sound;
+    }
+
+    public double calculateMarkup() {
+        if (getProductCondition() == ProductCondition.PREOWNED){
+            return this.getCostPrice() * 1.8;
+        } return this.getCostPrice() * 2.4;
     }
 }
