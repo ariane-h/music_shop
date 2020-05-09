@@ -28,4 +28,9 @@ public class PianoTest {
         assertEquals(PianoType.GRAND, grandPiano.getType());
     }
 
+    @Test
+    public void canPlay(){
+        assertEquals("plink plink plink", grandPiano.play("plink plink plink"));
+    }
 }
+

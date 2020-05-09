@@ -3,7 +3,7 @@ package products.instruments;
 import products.Brand;
 import products.ProductCondition;
 
-public class Piano extends Instrument{
+public class Piano extends Instrument implements IPlay{
 
     private PianoType type;
     private Integer numberOfKeys;
@@ -20,5 +20,9 @@ public class Piano extends Instrument{
 
     public Integer getNumberOfKeys() {
         return numberOfKeys;
+    }
+
+    public String play(String sound) {
+        return sound;
     }
 }

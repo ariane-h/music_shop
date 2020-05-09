@@ -34,5 +34,8 @@ public class GuitarTest {
         assertEquals(Brand.FENDER,guitar.getBrand());
     }
 
-
+    @Test
+    public void canPlay(){
+        assertEquals("strum strum strum", guitar.play("strum strum strum"));
+    }
 }

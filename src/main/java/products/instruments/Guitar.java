@@ -4,7 +4,7 @@ package products.instruments;
 import products.Brand;
 import products.ProductCondition;
 
-public class Guitar extends Instrument {
+public class Guitar extends Instrument implements IPlay{
 
     private GuitarType type;
     private Integer numberOfStrings;
@@ -21,5 +21,10 @@ public class Guitar extends Instrument {
 
     public Integer getNumberOfStrings() {
         return numberOfStrings;
+    }
+
+
+    public String play(String sound) {
+        return sound;
     }
 }
