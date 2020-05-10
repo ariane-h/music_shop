@@ -43,4 +43,16 @@ public class GuitarTest {
     public void canCalculateMarkup(){
         assertEquals(120.00, guitar.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canSetSalePrice(){
+        Double targetSalePrice = guitar.calculateMarkup();
+        guitar.setSalePrice(targetSalePrice);
+        assertEquals(120.00, guitar.getSalePrice(), 0.01);
+    }
+
+    @Test
+    public void canCalculateProfit(){
+        assertEquals(70.00, guitar.calculateProfit(), 0.01);
+    }
 }

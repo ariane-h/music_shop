@@ -32,4 +32,16 @@ public class DrumTest {
     public void canCalculateMarkup(){
         assertEquals(120.00,drums.calculateMarkup(),0.01);
     }
+
+    @Test
+    public void canSetSalePrice(){
+        Double targetSalePrice = drums.calculateMarkup();
+        drums.setSalePrice(targetSalePrice);
+        assertEquals(120.00, drums.getSalePrice(), 0.01);
+    }
+
+    @Test
+    public void canCalculateProfit(){
+        assertEquals(70.00, drums.calculateProfit(), 0.01);
+    }
 }

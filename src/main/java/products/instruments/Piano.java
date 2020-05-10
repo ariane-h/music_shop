@@ -32,4 +32,10 @@ public class Piano extends Instrument implements IPlay, ISell {
             return this.getCostPrice() * 1.8;
         } return this.getCostPrice() * 2.4;
     }
+
+    public double calculateProfit() {
+        double targetSalePrice = this.calculateMarkup();
+        double costPrice = this.getCostPrice();
+        return targetSalePrice - costPrice;
+    }
 }

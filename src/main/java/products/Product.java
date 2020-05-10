@@ -32,5 +32,7 @@ public abstract class Product {
         return brand;
     }
 
-
+    public void setSalePrice(Double newPrice) {
+        this.salePrice = newPrice;
+    }
 }

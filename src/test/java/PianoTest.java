@@ -37,5 +37,17 @@ public class PianoTest {
     public void canCalculateMarkup(){
         assertEquals(2400.00, grandPiano.calculateMarkup(),0.01);
     }
+
+    @Test
+    public void canSetSalePrice(){
+        Double targetSalePrice = grandPiano.calculateMarkup();
+        grandPiano.setSalePrice(targetSalePrice);
+        assertEquals(2400.00, grandPiano.getSalePrice(), 0.01);
+    }
+
+    @Test
+    public void canCalculateProfit(){
+        assertEquals(1400.00, grandPiano.calculateProfit(), 0.01);
+    }
 }
 
